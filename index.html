@@ -242,6 +242,47 @@ footer .logo span{color:#fff6dc}
 .help-link{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
 .help-link a{text-decoration:underline;color:var(--gold-2)}
 .mobile-nav{display:none}
+/* Egyptian upgrade */
+body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .38 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.gold-text{background:linear-gradient(100deg,#7d5a1c 0,#c9a14d 38%,#8a6420 62%,#d9b56a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{background:linear-gradient(100deg,#7d5a1c,#c9a14d 45%,#8a6420);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .eye{position:absolute;right:-60px;top:-30px;width:520px;color:var(--gold);opacity:.1;pointer-events:none}
+.hero .eye svg{width:100%;height:auto}
+.hero .ankh{position:absolute;left:3%;bottom:70px;width:54px;color:var(--gold);opacity:.35}
+.hero .ankh svg{width:100%;height:auto}
+.btn-buy,.btn-gold{position:relative;overflow:hidden}
+.btn-buy::after,.btn-gold::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,246,220,.45),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn-buy:hover::after,.btn-gold:hover::after{left:130%}
+.col-top::before{content:"";display:block;height:14px;width:min(280px,60%);margin:0 auto 22px;background:linear-gradient(90deg,transparent,var(--gold),transparent);clip-path:polygon(0 50%,45% 50%,50% 0,55% 50%,100% 50%,55% 56%,50% 100%,45% 56%);opacity:.7}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+.step{text-align:center;padding:0 10px;position:relative}
+.step .num{width:76px;height:76px;margin:0 auto 18px;border:2px solid var(--gold);border-radius:999px;display:grid;place-items:center;font-family:"Cinzel",serif;font-size:26px;color:var(--gold-2);background:#fff8e8;position:relative;box-shadow:0 0 0 6px var(--papyrus),0 0 0 7px var(--line)}
+.step:not(:last-child)::after{content:"";position:absolute;top:38px;left:calc(50% + 56px);right:calc(-50% + 56px);border-top:1.5px dotted var(--gold)}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15.5px;max-width:30ch;margin:0 auto}
+.about-pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-pics img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
+.about-pics img:first-child{grid-row:span 2;aspect-ratio:auto;height:100%}
+.logo-frame{border:2px solid var(--gold);padding:9px;background:var(--sand);box-shadow:var(--shadow);margin-bottom:14px}
+.logo-frame img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 45%}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 30px}
+.fact{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px}
+.fact .ic{width:30px;height:30px;color:var(--gold-2);flex:none}
+.fact b{display:block;color:var(--kohl);font-weight:500}
+.rv{transition:opacity .7s ease,transform .7s ease}
+.rvon .rv{opacity:0;transform:translateY(22px)}
+.rvon .rv.in{opacity:1;transform:none}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--kohl);color:#fff6dc;border-top:1px solid var(--gold-l);transform:translateY(110%);transition:transform .3s}
+.bar.show{transform:none}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:64px}
+.bar b{font-family:"Cinzel",serif;color:var(--gold-l);font-weight:600}
+.bar button{background:var(--gold-l);color:var(--kohl);border:0;padding:11px 22px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.bar button.ghost{background:none;color:var(--gold-l);border:1px solid var(--gold-l);margin-right:8px}
+.svc .ph img.bottom{object-position:50% 85%}
+#studio .split{align-items:start}#studio .split>div:last-child{position:sticky;top:110px}
+@media (max-width:820px){#studio .split>div:last-child{position:static}}
+@media (max-width:820px){.steps{grid-template-columns:1fr;gap:34px}.step:not(:last-child)::after{display:none}.hero .eye{width:340px;right:-90px}.hero .ankh{display:none}}
+@media (max-width:560px){.facts{grid-template-columns:1fr}.bar .ghost{display:none}.bar .wrap{height:60px}}
 .hero .wrap>*,.vwrap>*,.split>*,.pdp>*,.prod>*,.stats .wrap>*{min-width:0}
 @media (max-width:1024px){.services{grid-template-columns:repeat(2,1fr)}footer .cols{grid-template-columns:1fr 1fr}.care{grid-template-columns:1fr}}
 @media (max-width:820px){
@@ -292,6 +333,7 @@ footer .logo span{color:#fff6dc}
 <main>
 <section class="hero">
   <svg class="bgpyr" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 300L260 70L520 300Z" fill="#a57930"/><path d="M380 300L720 20L1060 300Z" fill="#a57930"/><path d="M900 300L1080 150L1260 300Z" fill="#a57930"/></svg>
+  <div class="eye" aria-hidden="true"><svg class="ic" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17C14 5 40 3 53 15C46 21 36 25 26 23C17 21 9 19 3 17Z"/><circle cx="30" cy="14" r="4.6" fill="currentColor"/><path d="M6 8C20-2 42-2 58 6"/><path d="M26 23C26 30 22 34 15 36"/><path d="M15 36C10 37 10 31 15 31"/><path d="M40 22C43 28 46 31 50 33"/></svg></div><div class="ankh" aria-hidden="true"><svg class="ic" viewBox="0 0 32 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><ellipse cx="16" cy="13" rx="8" ry="11"/><path d="M16 24V50M5 31H27"/></svg></div>
   <div class="wrap">
     <div>
       <span class="cartouche" style="font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-2);font-weight:600">Depil &amp; beauty studio · Kragujevac</span>
@@ -315,8 +357,20 @@ footer .logo span{color:#fff6dc}
   </div>
 </section>
 
-<section class="block" id="usluge">
-  <div class="wrap center">
+<section class="block" id="kako">
+  <div class="wrap center rv">
+    <span class="eyebrow">Kako zakazati</span>
+    <h2 class="col-top" style="margin-top:22px">Tri koraka do termina</h2>
+    <div class="steps" style="text-align:center">
+      <div class="step"><div class="num">I</div><h3>Izaberi usluge</h3><p>Dodaj u korpu sve što ti treba iz cenovnika: regije, lash ili brow lift, masažu.</p></div>
+      <div class="step"><div class="num">II</div><h3>Pošalji zahtev</h3><p>Upiši ime, telefon i željeni dan, prepodne ili popodne.</p></div>
+      <div class="step"><div class="num">III</div><h3>Mi potvrđujemo</h3><p>Javljamo ti se i dogovaramo tačan termin. Plaćaš u studiju.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="usluge" style="padding-top:20px">
+  <div class="wrap center rv">
     <span class="eyebrow">Naše usluge</span>
     <h2>Sve na jednom mestu</h2>
     <p class="sub">Od depilacije šećernom pastom do masaže. Izaberi uslugu, dodaj u korpu i pošalji zahtev za termin.</p>
@@ -324,9 +378,9 @@ footer .logo span{color:#fff6dc}
       <article class="svc"><div class="ph"><img src="img/noga.jpg" alt="Nanošenje šećerne paste na nogu" loading="lazy"></div><div class="bd"><h3>Depilacija šećernom pastom</h3><p>Lice, telo i kombinovane regije. Šećerna pasta, dame. Za muškarce pitaj pri zakazivanju.</p><div class="from">od 300 RSD</div><a class="more" href="depilacija.html">Sve o depilaciji</a></div></article>
       <article class="svc"><div class="ph"><img src="img/lash.jpg" alt="Lash lift, podignute trepavice izbliza" loading="lazy"></div><div class="bd"><h3>Lash lift</h3><p>Podignute i uvijene trepavice, prirodan izgled bez maskare. Efekat traje do 6–8 nedelja.</p><div class="from">2.000 RSD</div><a class="more" href="#zakazi" data-goto="lash">Zakaži</a></div></article>
       <article class="svc"><div class="ph"><img src="img/brow.jpg" alt="Brow lift, oblikovane obrve" loading="lazy"></div><div class="bd"><h3>Brow lift</h3><p>Obrve podignute i oblikovane u željeni izgled. Uz njih ide i korekcija, sa farbanjem ili bez njega.</p><div class="from">1.700 RSD</div><a class="more" href="#zakazi" data-goto="lash">Zakaži</a></div></article>
-      <article class="svc"><div class="ph icon"><svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="24" r="9"/><path d="M24 3V10M24 38V45M3 24H10M38 24H45M9 9L14 14M34 34L39 39M39 9L34 14M14 34L9 39"/></svg></div><div class="bd"><h3>Spraytan</h3><p>Nežna, ravnomerna boja. Najbolje ga je raditi dva dana nakon depilacije.</p><div class="from">2.000 RSD</div><a class="more" href="#zakazi" data-goto="lash">Zakaži</a></div></article>
+      <article class="svc"><div class="ph"><img class="bottom" src="img/spray.jpg" alt="Boce profesionalnog spraytan preparata u studiju" loading="lazy"></div><div class="bd"><h3>Spraytan</h3><p>Nežna, ravnomerna boja. Najbolje ga je raditi dva dana nakon depilacije.</p><div class="from">2.000 RSD</div><a class="more" href="#zakazi" data-goto="lash">Zakaži</a></div></article>
       <article class="svc"><div class="ph"><img src="img/masaza1.jpg" alt="Soba za masažu u studiju Egipćanka" loading="lazy"></div><div class="bd"><h3>Masaža</h3><p>Relax masaža ili antistres masaža sa češkanjem. Preporuka studija i za poklon.</p><div class="from">od 2.500 RSD</div><a class="more" href="#zakazi" data-goto="masaza">Zakaži</a></div></article>
-      <article class="svc"><div class="ph icon"><svg class="ic" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 28C16 10 40 6 59 16"/><path d="M5 28C18 18 40 16 59 16"/><path d="M12 30l2-5M22 26l2-5M32 23l2-5M42 21l2-5M52 19l1-4"/></svg></div><div class="bd"><h3>Korekcija obrva</h3><p>Brza korekcija oblika obrva, sa farbanjem ili bez njega.</p><div class="from">od 500 RSD</div><a class="more" href="#zakazi" data-goto="obrve">Zakaži</a></div></article>
+      <article class="svc"><div class="ph"><img src="img/obrve.jpg" alt="Oblikovana obrva i oko izbliza" loading="lazy"></div><div class="bd"><h3>Korekcija obrva</h3><p>Brza korekcija oblika obrva, sa farbanjem ili bez njega.</p><div class="from">od 500 RSD</div><a class="more" href="#zakazi" data-goto="obrve">Zakaži</a></div></article>
     </div>
   </div>
 </section>
@@ -343,7 +397,7 @@ footer .logo span{color:#fff6dc}
 </section>
 
 <section class="block dark" id="vaucer">
-  <div class="wrap vwrap">
+  <div class="wrap vwrap rv">
     <div class="vimg"><img src="img/vaucer.jpg" alt="Poklon vaučer Egipćanka" loading="lazy"></div>
     <div>
       <span class="eyebrow">Poklon vaučer</span>
@@ -366,8 +420,8 @@ footer .logo span{color:#fff6dc}
 
 <section class="block" id="edukacije">
   <div class="wrap">
-    <div class="center"><span class="eyebrow">Edukacije</span><h2>Nauči depilaciju šećernom pastom</h2><p class="sub">Individualna obuka u studiju. Posle obuke ne ostaješ sama: tu smo i kasnije, dok ne budeš spremna da kreneš samostalno.</p></div>
-    <div class="edu">
+    <div class="center rv"><span class="eyebrow">Edukacije</span><h2>Nauči depilaciju šećernom pastom</h2><p class="sub">Individualna obuka u studiju. Posle obuke ne ostaješ sama: tu smo i kasnije, dok ne budeš spremna da kreneš samostalno.</p></div>
+    <div class="edu rv">
       <article class="ecard"><h3>Osnovni nivo</h3><ul>
         <li>Jedan dan, oko 4,5 sata (može i kraće ili duže, zavisi od polaznice)</li>
         <li>Prvih sat do sat i po je teorija, zatim praksa na modelu koji je obezbeđen</li>
@@ -388,7 +442,7 @@ footer .logo span{color:#fff6dc}
 
 <section class="block" style="padding-top:0">
   <div class="wrap">
-    <div class="prod">
+    <div class="prod rv">
       <img src="img/puder.jpg" alt="Puder bez talka El Faraon" loading="lazy">
       <div>
         <span class="eyebrow">Za kući</span>
@@ -401,18 +455,34 @@ footer .logo span{color:#fff6dc}
   </div>
 </section>
 
+<section class="block" id="studio">
+  <div class="wrap split">
+    <div class="rv">
+      <div class="logo-frame"><img src="img/logo.jpg" alt="Logo Egipćanka, zlatne piramide i kap" loading="lazy"></div>
+      <div class="about-pics"><img src="img/studio1.jpg" alt="Kutak studija sa belim stolicama i biljkom" loading="lazy"><img src="img/studio2.jpg" alt="Beli ljiljani i pufovi u studiju" loading="lazy"><img src="img/studio3.jpg" alt="Studio sa foteljom i biljkom" loading="lazy"></div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">O studiju</span>
+      <h2>Mesto gde se <span class="gold-text">opuštaš</span></h2>
+      <p class="sub">Egipćanka je depil i beauty studio u Kragujevcu. Šest godina radimo depilaciju šećernom pastom, uz lash i brow lift, spraytan i masaže. Studio je uređen u tonovima peska i zlata, sa belim cvećem i svetlom koje opušta.</p>
+      <div class="facts">
+        <div class="fact"><svg class="ic" viewBox="0 0 32 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3C16 3 5 17 5 25a11 11 0 0 0 22 0C27 17 16 3 16 3Z"/><path d="M11 26a5 5 0 0 0 5 5"/></svg><div><b>Šećerna pasta</b>Depilacija za dame, lice i telo</div></div>
+        <div class="fact"><svg class="ic" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17C14 5 40 3 53 15C46 21 36 25 26 23C17 21 9 19 3 17Z"/><circle cx="30" cy="14" r="4.6" fill="currentColor"/><path d="M6 8C20-2 42-2 58 6"/><path d="M26 23C26 30 22 34 15 36"/><path d="M15 36C10 37 10 31 15 31"/><path d="M40 22C43 28 46 31 50 33"/></svg><div><b>Lash i brow lift</b>Prirodan, uredan pogled</div></div>
+        <div class="fact"><svg class="ic" viewBox="0 0 48 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 4C18 12 18 24 24 32C30 24 30 12 24 4Z"/><path d="M24 32C14 30 8 22 6 12C16 14 22 22 24 32Z"/><path d="M24 32C34 30 40 22 42 12C32 14 26 22 24 32Z"/><path d="M4 34H44"/></svg><div><b>Masaže</b>Relax i antistres sa češkanjem</div></div>
+        <div class="fact"><svg class="ic" viewBox="0 0 32 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><ellipse cx="16" cy="13" rx="8" ry="11"/><path d="M16 24V50M5 31H27"/></svg><div><b>200+ stalnih klijenata</b>Koji se rado vraćaju</div></div>
+      </div>
+      <a class="btn btn-buy" href="#zakazi">Zakaži termin</a>
+    </div>
+  </div>
+</section>
+
 <section class="block menu" id="utisci">
   <div class="wrap">
     <div class="center"><span class="eyebrow">Utisci</span><h2>Šta kažu klijentkinje</h2><p class="sub">Poruke koje je studio objavio na svom profilu, bez ispravki.</p></div>
-    <div class="reviews">
+    <div class="reviews rv">
       <figure class="review"><blockquote class="q">Predivan salon,jedini gde se osecam mnoogo prijatno,relaksirano i gde jedva cekam da dodjem</blockquote><figcaption class="who">Klijentkinja</figcaption></figure>
       <figure class="review"><blockquote class="q">…preprezadovoljna sa jucerasnjom masazom...nemam vise onu napetost u ledjima i vratu toliko mi je prijalo da ti ne mogu opisati,bukvalno mi je juce ulepsan ponedeljak</blockquote><figcaption class="who">Klijentkinja · masaža</figcaption></figure>
       <figure class="review"><blockquote class="q">Baš sam i mislila da će joj biti najprijatnije kod tebe iako te lično ne znam ali te već dugooo pratim na instagramu i zaista si jako ljubazna i prizemna žena</blockquote><figcaption class="who">Klijentkinja · poklon masaža</figcaption></figure>
-    </div>
-    <div style="margin-top:56px;display:grid;gap:14px;grid-template-columns:repeat(3,1fr)" class="gal3">
-      <img src="img/studio1.jpg" alt="Kutak studija sa belim stolicama i biljkom" loading="lazy" style="aspect-ratio:3/4;object-fit:cover;width:100%;border:1px solid var(--line)">
-      <img src="img/studio2.jpg" alt="Beli ljiljani i pufovi u studiju" loading="lazy" style="aspect-ratio:3/4;object-fit:cover;width:100%;border:1px solid var(--line)">
-      <img src="img/studio3.jpg" alt="Studio sa foteljom i biljkom" loading="lazy" style="aspect-ratio:3/4;object-fit:cover;width:100%;border:1px solid var(--line)">
     </div>
   </div>
 </section>
@@ -461,6 +531,7 @@ footer .logo span{color:#fff6dc}
     <div class="recap-wrap"><div class="recap" id="coRecap"></div></div>
   </div>
 </div>
+<div class="bar" id="bar"><div class="wrap"><span><b id="barN">0</b> <span id="barL">stavki</span> · <b id="barT"></b></span><span><button class="ghost" type="button" id="barCart">Korpa</button><button type="button" id="barGo">Pošalji zahtev</button></span></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 
@@ -535,6 +606,8 @@ function renderStacked(host, ids){
 }
 function renderCart(){
   $('cartCount').textContent = count();
+  const n = count(), bar = $('bar'); bar.classList.toggle('show', n > 0 && !$('modal').classList.contains('show') && !$('drawer').classList.contains('show'));
+  $('barN').textContent = n; $('barL').textContent = n === 1 ? 'stavka' : 'stavki'; $('barT').textContent = fmt(total());
   const body = $('drawerBody'), foot = $('drawerFoot');
   if (!cart.length){
     body.innerHTML = '<div class="empty"><div class="em"><svg class="ic" viewBox="0 0 32 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><ellipse cx="16" cy="13" rx="8" ry="11"/><path d="M16 24V50M5 31H27"/></svg></div><p><b>Korpa je prazna.</b></p><p>Izaberi uslugu iz cenovnika.</p></div>';
@@ -548,17 +621,17 @@ function renderCart(){
   }
 }
 function lockScroll(on){ document.body.style.overflow = on ? 'hidden' : ''; }
-function openCart(){ $('drawer').classList.add('show'); $('drawer').setAttribute('aria-hidden', 'false'); $('overlay').classList.add('show'); lockScroll(true); $('drawerClose').focus(); }
-function closeCart(){ $('drawer').classList.remove('show'); $('drawer').setAttribute('aria-hidden', 'true'); if (!$('modal').classList.contains('show')) { $('overlay').classList.remove('show'); lockScroll(false); } }
+function openCart(){ $('bar').classList.remove('show'); $('drawer').classList.add('show'); $('drawer').setAttribute('aria-hidden', 'false'); $('overlay').classList.add('show'); lockScroll(true); $('drawerClose').focus(); }
+function closeCart(){ $('drawer').classList.remove('show'); renderCart(); $('drawer').setAttribute('aria-hidden', 'true'); if (!$('modal').classList.contains('show')) { $('overlay').classList.remove('show'); lockScroll(false); } }
 const needsDay = () => cart.some(l => l.kind === 'usluga' || l.kind === 'edu');
 function openCheckout(){
-  closeCart(); $('overlay').classList.add('show');
+  closeCart(); $('overlay').classList.add('show'); $('bar').classList.remove('show');
   const m = $('modal'); m.classList.add('show'); lockScroll(true);
   const d = document.querySelector('#coForm [name=date]'); if (d){ const t = new Date(); t.setMinutes(t.getMinutes() - t.getTimezoneOffset()); d.min = t.toISOString().slice(0, 10); }
   $('whenRow').style.display = needsDay() ? '' : 'none';
   renderRecap(); m.scrollTop = 0; setTimeout(() => { const i = document.querySelector('#coForm input'); if (i) i.focus(); }, 30);
 }
-function closeCheckout(){ $('modal').classList.remove('show'); $('overlay').classList.remove('show'); lockScroll(false); resetSheet(); }
+function closeCheckout(){ $('modal').classList.remove('show'); renderCart(); $('overlay').classList.remove('show'); lockScroll(false); resetSheet(); }
 function recapLines(){ return cart.map(l => '<div class="rl"><div>' + esc(l.name) + ' × ' + l.qty + '<small>' + esc(l.variant) + '</small></div><b>' + fmt(l.unit * l.qty) + '</b></div>').join(''); }
 function renderRecap(){
   $('coRecap').innerHTML = '<h4>Tvoj izbor</h4>' + recapLines() + '<div class="sum tot" style="margin:10px 0 0"><span>Za plaćanje u studiju</span><span>' + fmt(total()) + '</span></div>';
@@ -597,6 +670,10 @@ function bindForm(){
 function initCart(){
   sheetHTML = $('sheet').innerHTML;
   bindForm(); renderCart();
+  $('barCart').onclick = openCart; $('barGo').onclick = openCheckout;
+  document.documentElement.classList.add('rvon');
+  const rvs = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){ const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12}); rvs.forEach(r => io.observe(r)); } else { rvs.forEach(r => r.classList.add('in')); }
   $('cartBtn').onclick = openCart; $('drawerClose').onclick = closeCart;
   $('sheet').addEventListener('click', e => { if (e.target.closest('#modalClose')) closeCheckout(); });
   $('overlay').onclick = () => { if ($('modal').classList.contains('show')) closeCheckout(); else closeCart(); };

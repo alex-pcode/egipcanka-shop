@@ -242,6 +242,47 @@ footer .logo span{color:#fff6dc}
 .help-link{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
 .help-link a{text-decoration:underline;color:var(--gold-2)}
 .mobile-nav{display:none}
+/* Egyptian upgrade */
+body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .38 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.gold-text{background:linear-gradient(100deg,#7d5a1c 0,#c9a14d 38%,#8a6420 62%,#d9b56a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{background:linear-gradient(100deg,#7d5a1c,#c9a14d 45%,#8a6420);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .eye{position:absolute;right:-60px;top:-30px;width:520px;color:var(--gold);opacity:.1;pointer-events:none}
+.hero .eye svg{width:100%;height:auto}
+.hero .ankh{position:absolute;left:3%;bottom:70px;width:54px;color:var(--gold);opacity:.35}
+.hero .ankh svg{width:100%;height:auto}
+.btn-buy,.btn-gold{position:relative;overflow:hidden}
+.btn-buy::after,.btn-gold::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,246,220,.45),transparent);transform:skewX(-20deg);transition:left .6s}
+.btn-buy:hover::after,.btn-gold:hover::after{left:130%}
+.col-top::before{content:"";display:block;height:14px;width:min(280px,60%);margin:0 auto 22px;background:linear-gradient(90deg,transparent,var(--gold),transparent);clip-path:polygon(0 50%,45% 50%,50% 0,55% 50%,100% 50%,55% 56%,50% 100%,45% 56%);opacity:.7}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:46px}
+.step{text-align:center;padding:0 10px;position:relative}
+.step .num{width:76px;height:76px;margin:0 auto 18px;border:2px solid var(--gold);border-radius:999px;display:grid;place-items:center;font-family:"Cinzel",serif;font-size:26px;color:var(--gold-2);background:#fff8e8;position:relative;box-shadow:0 0 0 6px var(--papyrus),0 0 0 7px var(--line)}
+.step:not(:last-child)::after{content:"";position:absolute;top:38px;left:calc(50% + 56px);right:calc(-50% + 56px);border-top:1.5px dotted var(--gold)}
+.step h3{font-size:19px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15.5px;max-width:30ch;margin:0 auto}
+.about-pics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-pics img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
+.about-pics img:first-child{grid-row:span 2;aspect-ratio:auto;height:100%}
+.logo-frame{border:2px solid var(--gold);padding:9px;background:var(--sand);box-shadow:var(--shadow);margin-bottom:14px}
+.logo-frame img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 45%}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 30px}
+.fact{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px}
+.fact .ic{width:30px;height:30px;color:var(--gold-2);flex:none}
+.fact b{display:block;color:var(--kohl);font-weight:500}
+.rv{transition:opacity .7s ease,transform .7s ease}
+.rvon .rv{opacity:0;transform:translateY(22px)}
+.rvon .rv.in{opacity:1;transform:none}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:90;background:var(--kohl);color:#fff6dc;border-top:1px solid var(--gold-l);transform:translateY(110%);transition:transform .3s}
+.bar.show{transform:none}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:64px}
+.bar b{font-family:"Cinzel",serif;color:var(--gold-l);font-weight:600}
+.bar button{background:var(--gold-l);color:var(--kohl);border:0;padding:11px 22px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.bar button.ghost{background:none;color:var(--gold-l);border:1px solid var(--gold-l);margin-right:8px}
+.svc .ph img.bottom{object-position:50% 85%}
+#studio .split{align-items:start}#studio .split>div:last-child{position:sticky;top:110px}
+@media (max-width:820px){#studio .split>div:last-child{position:static}}
+@media (max-width:820px){.steps{grid-template-columns:1fr;gap:34px}.step:not(:last-child)::after{display:none}.hero .eye{width:340px;right:-90px}.hero .ankh{display:none}}
+@media (max-width:560px){.facts{grid-template-columns:1fr}.bar .ghost{display:none}.bar .wrap{height:60px}}
 .hero .wrap>*,.vwrap>*,.split>*,.pdp>*,.prod>*,.stats .wrap>*{min-width:0}
 @media (max-width:1024px){.services{grid-template-columns:repeat(2,1fr)}footer .cols{grid-template-columns:1fr 1fr}.care{grid-template-columns:1fr}}
 @media (max-width:820px){
@@ -381,6 +422,7 @@ footer .logo span{color:#fff6dc}
     <div class="recap-wrap"><div class="recap" id="coRecap"></div></div>
   </div>
 </div>
+<div class="bar" id="bar"><div class="wrap"><span><b id="barN">0</b> <span id="barL">stavki</span> · <b id="barT"></b></span><span><button class="ghost" type="button" id="barCart">Korpa</button><button type="button" id="barGo">Pošalji zahtev</button></span></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 
@@ -455,6 +497,8 @@ function renderStacked(host, ids){
 }
 function renderCart(){
   $('cartCount').textContent = count();
+  const n = count(), bar = $('bar'); bar.classList.toggle('show', n > 0 && !$('modal').classList.contains('show') && !$('drawer').classList.contains('show'));
+  $('barN').textContent = n; $('barL').textContent = n === 1 ? 'stavka' : 'stavki'; $('barT').textContent = fmt(total());
   const body = $('drawerBody'), foot = $('drawerFoot');
   if (!cart.length){
     body.innerHTML = '<div class="empty"><div class="em"><svg class="ic" viewBox="0 0 32 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><ellipse cx="16" cy="13" rx="8" ry="11"/><path d="M16 24V50M5 31H27"/></svg></div><p><b>Korpa je prazna.</b></p><p>Izaberi uslugu iz cenovnika.</p></div>';
@@ -468,17 +512,17 @@ function renderCart(){
   }
 }
 function lockScroll(on){ document.body.style.overflow = on ? 'hidden' : ''; }
-function openCart(){ $('drawer').classList.add('show'); $('drawer').setAttribute('aria-hidden', 'false'); $('overlay').classList.add('show'); lockScroll(true); $('drawerClose').focus(); }
-function closeCart(){ $('drawer').classList.remove('show'); $('drawer').setAttribute('aria-hidden', 'true'); if (!$('modal').classList.contains('show')) { $('overlay').classList.remove('show'); lockScroll(false); } }
+function openCart(){ $('bar').classList.remove('show'); $('drawer').classList.add('show'); $('drawer').setAttribute('aria-hidden', 'false'); $('overlay').classList.add('show'); lockScroll(true); $('drawerClose').focus(); }
+function closeCart(){ $('drawer').classList.remove('show'); renderCart(); $('drawer').setAttribute('aria-hidden', 'true'); if (!$('modal').classList.contains('show')) { $('overlay').classList.remove('show'); lockScroll(false); } }
 const needsDay = () => cart.some(l => l.kind === 'usluga' || l.kind === 'edu');
 function openCheckout(){
-  closeCart(); $('overlay').classList.add('show');
+  closeCart(); $('overlay').classList.add('show'); $('bar').classList.remove('show');
   const m = $('modal'); m.classList.add('show'); lockScroll(true);
   const d = document.querySelector('#coForm [name=date]'); if (d){ const t = new Date(); t.setMinutes(t.getMinutes() - t.getTimezoneOffset()); d.min = t.toISOString().slice(0, 10); }
   $('whenRow').style.display = needsDay() ? '' : 'none';
   renderRecap(); m.scrollTop = 0; setTimeout(() => { const i = document.querySelector('#coForm input'); if (i) i.focus(); }, 30);
 }
-function closeCheckout(){ $('modal').classList.remove('show'); $('overlay').classList.remove('show'); lockScroll(false); resetSheet(); }
+function closeCheckout(){ $('modal').classList.remove('show'); renderCart(); $('overlay').classList.remove('show'); lockScroll(false); resetSheet(); }
 function recapLines(){ return cart.map(l => '<div class="rl"><div>' + esc(l.name) + ' × ' + l.qty + '<small>' + esc(l.variant) + '</small></div><b>' + fmt(l.unit * l.qty) + '</b></div>').join(''); }
 function renderRecap(){
   $('coRecap').innerHTML = '<h4>Tvoj izbor</h4>' + recapLines() + '<div class="sum tot" style="margin:10px 0 0"><span>Za plaćanje u studiju</span><span>' + fmt(total()) + '</span></div>';
@@ -517,6 +561,10 @@ function bindForm(){
 function initCart(){
   sheetHTML = $('sheet').innerHTML;
   bindForm(); renderCart();
+  $('barCart').onclick = openCart; $('barGo').onclick = openCheckout;
+  document.documentElement.classList.add('rvon');
+  const rvs = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){ const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12}); rvs.forEach(r => io.observe(r)); } else { rvs.forEach(r => r.classList.add('in')); }
   $('cartBtn').onclick = openCart; $('drawerClose').onclick = closeCart;
   $('sheet').addEventListener('click', e => { if (e.target.closest('#modalClose')) closeCheckout(); });
   $('overlay').onclick = () => { if ($('modal').classList.contains('show')) closeCheckout(); else closeCart(); };
