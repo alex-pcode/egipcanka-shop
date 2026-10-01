@@ -242,6 +242,59 @@ footer .logo span{color:#fff6dc}
 .help-link{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
 .help-link a{text-decoration:underline;color:var(--gold-2)}
 .mobile-nav{display:none}
+/* ===== hero 2: night sky ===== */
+body.home .strip{display:none}
+body.home header.site{position:fixed;left:0;right:0;top:0;transition:background .35s,border-color .35s}
+body.home header.site.top:not(.menu-open){background:transparent;backdrop-filter:none;border-bottom-color:transparent}
+body.home header.site.top:not(.menu-open) .logo{color:var(--gold-l)}
+body.home header.site.top:not(.menu-open) .logo span{color:#fff6dc}
+body.home header.site.top:not(.menu-open) .logo small{color:var(--gold-l)}
+body.home header.site.top:not(.menu-open) nav.main a{color:#f1e6c8}
+body.home header.site.top:not(.menu-open) .icon-btn{background:rgba(255,246,220,.08);border-color:rgba(217,181,106,.55);color:#fff6dc}
+.hero2{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;color:#f1e6c8;isolation:isolate;
+ background:radial-gradient(60% 52% at 50% 42%,rgba(217,181,106,.30),transparent 72%),radial-gradient(90% 60% at 50% 100%,rgba(165,121,48,.22),transparent 70%),linear-gradient(180deg,#0e1a2d 0%,#16130f 55%,#0a0704 100%)}
+.h2-stars{position:absolute;inset:0;z-index:-3;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cg fill='%23f3e1a8'%3E%3Ccircle cx='30' cy='60' r='1.1' opacity='.8'/%3E%3Ccircle cx='120' cy='20' r='.8' opacity='.6'/%3E%3Ccircle cx='210' cy='90' r='1.3' opacity='.9'/%3E%3Ccircle cx='320' cy='40' r='.9' opacity='.7'/%3E%3Ccircle cx='390' cy='130' r='1.1' opacity='.8'/%3E%3Ccircle cx='60' cy='190' r='.8' opacity='.6'/%3E%3Ccircle cx='170' cy='240' r='1.2' opacity='.8'/%3E%3Ccircle cx='280' cy='210' r='.9' opacity='.6'/%3E%3Ccircle cx='360' cy='300' r='1.3' opacity='.9'/%3E%3Ccircle cx='90' cy='330' r='1' opacity='.7'/%3E%3Ccircle cx='240' cy='370' r='.8' opacity='.6'/%3E%3Ccircle cx='20' cy='400' r='1.1' opacity='.8'/%3E%3C/g%3E%3C/svg%3E");opacity:.75;animation:tw 7s ease-in-out infinite alternate}
+@keyframes tw{from{opacity:.35}to{opacity:.9}}
+.h2-sun{position:absolute;z-index:-2;left:50%;top:52%;width:min(76vh,760px);transform:translate(calc(-50% + var(--mx,0)*-12px),-50%);animation:spin 160s linear infinite;opacity:.9}
+@keyframes spin{to{rotate:360deg}}
+.h2-pyr{position:absolute;z-index:-1;left:0;right:0;bottom:0;width:100%;height:46%}
+.h2-pyr .l1{transform:translateX(calc(var(--mx,0)*-26px))}.h2-pyr .l2{transform:translateX(calc(var(--mx,0)*-14px))}.h2-pyr .l3{transform:translateX(calc(var(--mx,0)*-6px))}
+.h2-in{position:relative;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px;padding:116px 24px 22px;max-width:1520px;margin:0 auto;width:100%}
+.h2-top{text-align:center}
+.hero2 .cartouche{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-l);font-weight:500;border-color:rgba(217,181,106,.7)}
+.hero2 .cartouche::after{background:rgba(217,181,106,.7)}
+.h2-stage{position:relative;flex:1;display:grid;place-items:center;min-height:300px}
+.h2-arch{position:absolute;left:50%;top:50%;width:clamp(180px,25vw,390px);aspect-ratio:3/4.1;transform:translate(calc(-50% + var(--mx,0)*14px),calc(-50% + var(--my,0)*10px));border-radius:999px 999px 8px 8px;overflow:hidden;border:2px solid rgba(217,181,106,.75);box-shadow:0 0 0 9px rgba(217,181,106,.07),0 50px 90px -24px #000,0 0 110px rgba(217,181,106,.28);animation:archIn 1.8s cubic-bezier(.2,.8,.2,1) both}
+.h2-arch img{width:100%;height:100%;object-fit:cover;filter:brightness(.6) saturate(1.2) contrast(1.06)}
+.h2-arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,26,45,.25),transparent 35%,rgba(10,7,4,.75))}
+@keyframes archIn{from{opacity:0;scale:.92}to{opacity:1;scale:1}}
+.h2-wm{position:relative;width:100%;text-align:center;z-index:2;filter:drop-shadow(0 0 34px rgba(217,181,106,.4)) drop-shadow(0 16px 22px rgba(0,0,0,.6))}
+.wm{display:block;margin:0;font-family:"Cinzel",serif;font-weight:900;font-size:clamp(38px,12.4vw,252px);line-height:1;padding:.06em 0 .02em;letter-spacing:.015em;white-space:nowrap;animation:wmIn 1.8s cubic-bezier(.2,.8,.2,1) .15s both}
+.wm.sh{position:absolute;left:0;right:0;top:0;transform:translateY(.05em);color:#1c1204;-webkit-text-fill-color:#1c1204;z-index:-1}
+.wm.face{background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) 0 0/260% 100% no-repeat,linear-gradient(180deg,#fff7d6 0%,#f2d77f 22%,#c39a3e 46%,#8a6420 58%,#f6df9c 72%,#b8892f 88%,#6a4a14 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:wmIn 1.8s cubic-bezier(.2,.8,.2,1) .15s both,sheen 6.5s ease-in-out 2.2s infinite}
+@keyframes wmIn{from{opacity:0;letter-spacing:.16em;translate:0 .14em;filter:blur(6px)}to{opacity:1;letter-spacing:.015em;translate:0 0;filter:blur(0)}}
+@keyframes sheen{0%,55%{background-position:0% 0,0 0}100%{background-position:100% 0,0 0}}
+.h2-bottom{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:end;animation:fadeUp 1.2s ease 1s both}
+@keyframes fadeUp{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+.h2-mid{text-align:center}
+.h2-tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(22px,2.6vw,34px);color:var(--gold-l);margin-bottom:16px}
+.hero2 .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero2 .btn-ghost{color:#fff6dc;border-color:var(--gold-l)}
+.hero2 .btn-ghost:hover{background:#fff6dc;color:var(--kohl)}
+.h2-info{font-size:13px;letter-spacing:.1em;color:#d9cba7;display:grid;gap:2px;padding-bottom:6px}
+.h2-info b{font-family:"Cinzel",serif;color:var(--gold-l);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px}
+.h2-info.right{text-align:right}
+.mq{border-top:1px solid rgba(217,181,106,.35);background:rgba(8,6,4,.72);overflow:hidden;padding:14px 0}
+.mq-track{display:flex;width:max-content;animation:mq 46s linear infinite}
+.mq span{font-family:"Cinzel",serif;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-l);padding:0 26px;white-space:nowrap}
+.mq span::after{content:"";display:inline-block;width:7px;height:7px;margin-left:52px;background:var(--gold);transform:rotate(45deg) translateY(-1px)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (max-width:820px){
+ .h2-in{padding:96px 16px 18px}.h2-bottom{grid-template-columns:1fr}.h2-info{display:none}
+ .h2-arch{width:clamp(170px,54vw,300px)}.wm{font-size:clamp(34px,12.2vw,120px)}
+ .h2-sun{width:130vw;top:42%}.h2-stage{min-height:46svh}
+}
+@media (prefers-reduced-motion:reduce){.wm,.h2-arch,.h2-bottom,.h2-sun,.mq-track,.h2-stars{animation:none!important}.wm.face{background-position:0% 0,0 0}}
 /* Egyptian upgrade */
 body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .38 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .gold-text{background:linear-gradient(100deg,#7d5a1c 0,#c9a14d 38%,#8a6420 62%,#d9b56a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -310,7 +363,7 @@ body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
-<body>
+<body class="home">
 <div class="strip">Drvarska 13, Kragujevac &nbsp;·&nbsp; <b>Pon–Pet 09–20h</b> &nbsp;·&nbsp; <b>Subota 09–14h</b></div>
 <header class="site">
   <div class="wrap">
@@ -331,23 +384,38 @@ body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 </header>
 
 <main>
-<section class="hero">
-  <svg class="bgpyr" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M0 300L260 70L520 300Z" fill="#a57930"/><path d="M380 300L720 20L1060 300Z" fill="#a57930"/><path d="M900 300L1080 150L1260 300Z" fill="#a57930"/></svg>
-  <div class="eye" aria-hidden="true"><svg class="ic" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17C14 5 40 3 53 15C46 21 36 25 26 23C17 21 9 19 3 17Z"/><circle cx="30" cy="14" r="4.6" fill="currentColor"/><path d="M6 8C20-2 42-2 58 6"/><path d="M26 23C26 30 22 34 15 36"/><path d="M15 36C10 37 10 31 15 31"/><path d="M40 22C43 28 46 31 50 33"/></svg></div><div class="ankh" aria-hidden="true"><svg class="ic" viewBox="0 0 32 52" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><ellipse cx="16" cy="13" rx="8" ry="11"/><path d="M16 24V50M5 31H27"/></svg></div>
-  <div class="wrap">
-    <div>
-      <span class="cartouche" style="font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-2);font-weight:600">Depil &amp; beauty studio · Kragujevac</span>
-      <h1>Glatka koža,<br><em>više samopouzdanja.</em></h1>
-      <p class="lead">Depilacija šećernom pastom, lash i brow lift, spraytan i masaže. Izaberi uslugu, pošalji zahtev za termin i mi ti se javljamo da ga potvrdimo.</p>
-      <div class="cta"><a class="btn btn-buy" href="#zakazi">Zakaži termin</a><a class="btn btn-ghost" href="#vaucer">Poklon vaučer</a></div>
+<section class="hero2" id="top">
+  <div class="h2-stars" aria-hidden="true"></div>
+  <svg class="h2-sun" viewBox="0 0 200 200" fill="none" stroke="#d9b56a" aria-hidden="true"><circle cx="100" cy="100" r="99" stroke-width=".5" opacity=".7"/><circle cx="100" cy="100" r="83" stroke-width=".4" stroke-dasharray="1.2 2.4" opacity=".6"/><circle cx="100" cy="100" r="70" stroke-width=".35" opacity=".4"/><path stroke-width=".6" opacity=".8" d="M186.00 100.00L196.00 100.00M190.65 107.93L195.63 108.37M189.62 115.80L194.54 116.67M187.90 123.55L192.73 124.85M185.51 131.12L190.21 132.83M182.47 138.46L187.01 140.57M174.48 143.00L183.14 148.00M174.54 152.20L178.64 155.06M169.71 158.49L173.54 161.71M164.35 164.35L167.88 167.88M158.49 169.71L161.71 173.54M152.20 174.54L155.06 178.64M143.00 174.48L148.00 183.14M138.46 182.47L140.57 187.01M131.12 185.51L132.83 190.21M123.55 187.90L124.85 192.73M115.80 189.62L116.67 194.54M107.93 190.65L108.37 195.63M100.00 186.00L100.00 196.00M92.07 190.65L91.63 195.63M84.20 189.62L83.33 194.54M76.45 187.90L75.15 192.73M68.88 185.51L67.17 190.21M61.54 182.47L59.43 187.01M57.00 174.48L52.00 183.14M47.80 174.54L44.94 178.64M41.51 169.71L38.29 173.54M35.65 164.35L32.12 167.88M30.29 158.49L26.46 161.71M25.46 152.20L21.36 155.06M25.52 143.00L16.86 148.00M17.53 138.46L12.99 140.57M14.49 131.12L9.79 132.83M12.10 123.55L7.27 124.85M10.38 115.80L5.46 116.67M9.35 107.93L4.37 108.37M14.00 100.00L4.00 100.00M9.35 92.07L4.37 91.63M10.38 84.20L5.46 83.33M12.10 76.45L7.27 75.15M14.49 68.88L9.79 67.17M17.53 61.54L12.99 59.43M25.52 57.00L16.86 52.00M25.46 47.80L21.36 44.94M30.29 41.51L26.46 38.29M35.65 35.65L32.12 32.12M41.51 30.29L38.29 26.46M47.80 25.46L44.94 21.36M57.00 25.52L52.00 16.86M61.54 17.53L59.43 12.99M68.88 14.49L67.17 9.79M76.45 12.10L75.15 7.27M84.20 10.38L83.33 5.46M92.07 9.35L91.63 4.37M100.00 14.00L100.00 4.00M107.93 9.35L108.37 4.37M115.80 10.38L116.67 5.46M123.55 12.10L124.85 7.27M131.12 14.49L132.83 9.79M138.46 17.53L140.57 12.99M143.00 25.52L148.00 16.86M152.20 25.46L155.06 21.36M158.49 30.29L161.71 26.46M164.35 35.65L167.88 32.12M169.71 41.51L173.54 38.29M174.54 47.80L178.64 44.94M174.48 57.00L183.14 52.00M182.47 61.54L187.01 59.43M185.51 68.88L190.21 67.17M187.90 76.45L192.73 75.15M189.62 84.20L194.54 83.33M190.65 92.07L195.63 91.63"/></svg>
+  <svg class="h2-pyr" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g class="l1"><path d="M-60 420L260 150L580 420Z" fill="#14100a" stroke="#a57930" stroke-opacity=".35"/></g>
+    <g class="l2"><path d="M820 420L1180 110L1540 420Z" fill="#100c07" stroke="#a57930" stroke-opacity=".4"/></g>
+    <g class="l3"><path d="M360 420L720 40L1080 420Z" fill="#0c0905" stroke="#d9b56a" stroke-opacity=".5"/><path d="M720 40L720 420" stroke="#d9b56a" stroke-opacity=".12"/></g>
+    <rect y="396" width="1440" height="24" fill="#080604"/>
+  </svg>
+  <div class="h2-in">
+    <div class="h2-top"><span class="cartouche">Depil &amp; beauty studio · Kragujevac</span></div>
+    <div class="h2-stage">
+      <div class="h2-arch"><img src="img/med.jpg" alt="Šećerna pasta u zlatnim nitima na drvenom štapiću"></div>
+      <div class="h2-wm">
+        <span class="wm sh" aria-hidden="true">EGIPĆANKA</span>
+        <h1 class="wm face">EGIPĆANKA</h1>
+      </div>
     </div>
-    <div class="arch">
-      <div class="frame"><div><img src="img/med.jpg" alt="Šećerna pasta u zlatnim nitima na drvenom štapiću"></div></div>
-      <div class="seal"><b>6</b><span>godina u poslu</span></div>
+    <div class="h2-bottom">
+      <div class="h2-info"><b>Drvarska 13, Kragujevac</b><span>Pon–Pet 09–20h · Sub 09–14h</span></div>
+      <div class="h2-mid">
+        <p class="h2-tag">Glatka koža, više samopouzdanja.</p>
+        <div class="cta"><a class="btn btn-gold" href="#zakazi">Zakaži termin</a><a class="btn btn-ghost" href="#vaucer">Poklon vaučer</a></div>
+      </div>
+      <div class="h2-info right"><b>6 godina u poslu</b><span>200+ stalnih klijenata</span></div>
     </div>
   </div>
+  <div class="mq" aria-hidden="true"><div class="mq-track">
+    <span>Depilacija šećernom pastom</span><span>Lash lift</span><span>Brow lift</span><span>Spraytan</span><span>Masaža</span><span>Edukacije</span><span>Poklon vaučer</span>
+    <span>Depilacija šećernom pastom</span><span>Lash lift</span><span>Brow lift</span><span>Spraytan</span><span>Masaža</span><span>Edukacije</span><span>Poklon vaučer</span>
+  </div></div>
 </section>
-<div class="frieze"></div>
 <section class="stats">
   <div class="wrap">
     <div class="stat"><b>200+</b><span>stalnih klijenata</span></div>
@@ -699,6 +767,19 @@ function initCart(){
 
 renderTabs($('catalog'));
 initCart();
+(function(){
+  const h = document.querySelector('header.site');
+  function f(){ h.classList.toggle('top', scrollY < 40); }
+  f(); addEventListener('scroll', f, {passive:true});
+  const hero = document.querySelector('.hero2');
+  if (hero && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    hero.addEventListener('pointermove', e => {
+      const r = hero.getBoundingClientRect();
+      hero.style.setProperty('--mx', ((e.clientX - r.left) / r.width - .5).toFixed(3));
+      hero.style.setProperty('--my', ((e.clientY - r.top) / r.height - .5).toFixed(3));
+    });
+  }
+})();
 document.querySelectorAll('[data-goto]').forEach(a => a.addEventListener('click', () => selectTab(a.dataset.goto)));
 /* voucher */
 (function(){
