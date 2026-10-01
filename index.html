@@ -324,7 +324,12 @@ body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 .about-pics img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
 .about-pics img:first-child{grid-row:span 2;aspect-ratio:auto;height:100%}
 .logo-frame{border:2px solid var(--gold);padding:9px;background:var(--sand);box-shadow:var(--shadow);margin-bottom:14px}
-.logo-frame img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 45%}
+.logo-frame{background:#fff8e8}
+.logo-frame img{width:100%;aspect-ratio:16/10;object-fit:contain;padding:14px}
+.logo .mk{height:46px;width:auto;display:block}
+.logo .mk-g{display:none}
+body.home header.site.top:not(.menu-open) .mk-g{display:block}
+body.home header.site.top:not(.menu-open) .mk-d{display:none}
 .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0 30px}
 .fact{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px}
 .fact .ic{width:30px;height:30px;color:var(--gold-2);flex:none}
@@ -374,7 +379,7 @@ body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 <div class="strip">Drvarska 13, Kragujevac &nbsp;·&nbsp; <b>Pon–Pet 09–20h</b> &nbsp;·&nbsp; <b>Subota 09–14h</b></div>
 <header class="site">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="Egipćanka, početna"><svg class="ic" viewBox="0 0 44 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M1 27L16 2L31 27Z"/><path d="M20 27L30 11L43 27Z"/></svg><div><span>EGIPĆANKA</span><small>Depil &amp; beauty studio</small></div></a>
+    <a class="logo" href="index.html" aria-label="Egipćanka, početna"><img class="mk mk-d" src="img/mark-dark.png" alt=""><img class="mk mk-g" src="img/mark-gold.png" alt=""><div><span>EGIPĆANKA</span><small>Depil &amp; beauty studio</small></div></a>
     <nav class="main" aria-label="Glavna navigacija">
       <a href="index.html#usluge">Usluge</a>
       <a href="index.html#zakazi">Cenovnik</a>
@@ -533,7 +538,7 @@ body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 <section class="block" id="studio">
   <div class="wrap split">
     <div class="rv">
-      <div class="logo-frame"><img src="img/logo.jpg" alt="Logo Egipćanka, zlatne piramide i kap" loading="lazy"></div>
+      <div class="logo-frame"><img src="img/logo-dark.png" alt="Logo Egipćanka depil &amp; beauty studio" loading="lazy"></div>
       <div class="about-pics"><img src="img/studio1.jpg" alt="Kutak studija sa belim stolicama i biljkom" loading="lazy"><img src="img/studio2.jpg" alt="Beli ljiljani i pufovi u studiju" loading="lazy"><img src="img/studio3.jpg" alt="Studio sa foteljom i biljkom" loading="lazy"></div>
     </div>
     <div class="rv">
@@ -567,7 +572,7 @@ body{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
   <div class="wrap">
     <div class="cols">
       <div>
-        <a class="logo" href="index.html" style="color:var(--gold-l)"><svg class="ic" viewBox="0 0 44 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M1 27L16 2L31 27Z"/><path d="M20 27L30 11L43 27Z"/></svg><div><span>EGIPĆANKA</span><small style="color:var(--gold-l)">Depil &amp; beauty studio</small></div></a>
+        <a class="logo" href="index.html" style="color:var(--gold-l)"><img class="mk" src="img/mark-gold.png" alt=""><div><span>EGIPĆANKA</span><small style="color:var(--gold-l)">Depil &amp; beauty studio</small></div></a>
         <p style="margin-top:16px;font-size:15px;max-width:34ch">Depilacija šećernom pastom, lash i brow lift, spraytan, masaže i edukacije u Kragujevcu.</p>
       </div>
       <div><h4>Studio</h4><ul><li><a href="index.html#usluge">Usluge</a></li><li><a href="depilacija.html">Depilacija šećernom pastom</a></li><li><a href="index.html#zakazi">Cenovnik</a></li><li><a href="index.html#vaucer">Poklon vaučer</a></li><li><a href="index.html#edukacije">Edukacije</a></li></ul></div>
